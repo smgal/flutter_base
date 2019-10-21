@@ -16,7 +16,7 @@ class LocaleManager {
   }
 
   Future<bool> load() async {
-    // TODO: 디폴트 lang으로 fallbak 가능하도록
+    // TODO: 디폴트 lang으로 fallback 가능하도록
     // default JSON을 읽은 후 langs JSON으로 덮어 쓰는 방식
     var defaultJsonPath = 'assets/strings/values.json';
 

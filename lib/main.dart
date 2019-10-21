@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
 import './managers/locale.dart';
+import './routes/app_logo.dart' show AppLogo;
 import './routes/home.dart' show Home;
 
 
@@ -13,9 +14,16 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Base',
+
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+
+      routes: {
+        '/app-logo': (BuildContext context) => AppLogo(),
+        '/home': (BuildContext context) => Home(),
+      },
+
       localizationsDelegates: [
         LocaleDelegate(),
         GlobalMaterialLocalizations.delegate,
@@ -26,7 +34,7 @@ class MyApp extends StatelessWidget {
         Locale('ko', '')
       ],
       
-      home: Home(),
+      home: AppLogo(),
     );
   }
 }

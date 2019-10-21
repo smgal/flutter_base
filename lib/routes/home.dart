@@ -16,7 +16,7 @@ class HomeState extends State<Home> {
   Widget build(BuildContext context) {
 
     var locale = LocaleManager.of(context);
-    
+
     return Scaffold(
       appBar: AppBar(
         title: Text(locale.getString('APP_TITLE')),
@@ -24,6 +24,7 @@ class HomeState extends State<Home> {
       body: Column(
         children: <Widget>[
           Center(
+            
             child: Text(locale.getString('TEST_STRING')),
           ),
           Expanded(

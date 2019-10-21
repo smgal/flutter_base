@@ -29,7 +29,11 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_launcher_icons:
+
+  # Run the following commands
+  # > flutter packages get
+  # > flutter packages pub run flutter_launcher_icons:main    
+  flutter_launcher_icons: "^0.7.0"
 
 flutter_icons:
   image_path_android: "assets/icons/app_icon_250.png"

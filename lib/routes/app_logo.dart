@@ -27,8 +27,6 @@ class AppLogoState extends State<AppLogo> {
       });
     });
 
-    // TODO: 파라미터로 설정할 수 있게 하자
-
     // 상태바, 내비게이션 감추기(fullscreen)
     SystemChrome.setEnabledSystemUIOverlays([]);
     /*
@@ -77,10 +75,10 @@ class AppLogoState extends State<AppLogo> {
 
   Future<void> goNext() async{
     Timer(Duration(milliseconds: 2500), () {
-      // TODO: 외부 파라미터로 지정할 수 있게
+      // App의 UI 형태를 지정
       SystemChrome.setEnabledSystemUIOverlays(SystemUiOverlay.values);
 
-      Navigator.of(context).pushNamed('/home');
+      Navigator.of(context).pushReplacementNamed('/home');
     });
   }
 }

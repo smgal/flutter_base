@@ -43,6 +43,40 @@ class AppLogoState extends State<AppLogo> {
 
   @override
   Widget build(BuildContext context) {
+
+    var queryData = MediaQuery.of(context, nullOk: true);
+    if (queryData != null) {
+      print('+=[ MediaQuery ]====================-');
+      print('| Screen size: ${queryData.size}');
+      print('| Pixel ratio: ${queryData.devicePixelRatio}');
+      print('| Text  scale: ${queryData.textScaleFactor}');
+      print('+------------------------------------');
+
+      /* In case of SM G965N
+        queryData: MediaQueryData(
+          size: Size(320.0, 657.8) or (320.0, 609.8)
+          | aspectRatio: 0.48648648648648646
+          | isFinite: true
+          | isInfinite: false
+          | longestSide: 657.7777777777778
+          | shortestSide: 320.0
+          | runtimeType: Size 
+          devicePixelRatio: 4.5, 
+          textScaleFactor: 1.1, 
+          platformBrightness: Brightness.light, 
+          padding: EdgeInsets(0.0, 24.0, 0.0, 0.0), 
+          viewPadding: EdgeInsets(0.0, 24.0, 0.0, 0.0), 
+          viewInsets: EdgeInsets.zero, 
+          physicalDepth: 1.7976931348623157e+308, 
+          alwaysUse24HourFormat: false, 
+          accessibleNavigation: false, 
+          disableAnimations: false, 
+          invertColors: false, 
+          boldText: false
+        )
+      */
+    }
+
     var locale = LocaleManager.of(context);
     return Scaffold(
       primary: true,

@@ -44,7 +44,7 @@ class AppLogoState extends State<AppLogo> {
   @override
   Widget build(BuildContext context) {
 
-    var queryData = MediaQuery.of(context, nullOk: true);
+    var queryData = MediaQuery.of(context);
     if (queryData != null) {
       print('+=[ MediaQuery ]====================-');
       print('| Screen size: ${queryData.size}');
